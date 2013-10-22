@@ -1,0 +1,19 @@
+# Logfile created on 2013-10-22 16:55:09 -0500 by logger.rb/36483
+[2013-10-22 16:55:09 -0500] Request params -> {"url"=>"myurl.jsp", "controller"=>"http_request_recorder", "action"=>"record"}
+[2013-10-22 16:55:09 -0500] -> Request body begin
+<this is="some">
+   <attr val="xml" />
+</this>
+[2013-10-22 16:55:09 -0500] -> Request body end
+[2013-10-22 16:55:58 -0500] Request params -> {"url"=>"myurl.jsp", "controller"=>"http_request_recorder", "action"=>"record"}
+[2013-10-22 16:55:58 -0500] -> Request body begin
+<this is="some">
+   <attr val="xml" />
+</this>
+[2013-10-22 16:55:58 -0500] -> Request body end
+[2013-10-22 16:57:18 -0500] Request params -> {"url"=>"myurl.jsp", "controller"=>"http_request_recorder", "action"=>"record"}
+[2013-10-22 16:57:18 -0500] -> Request body begin
+<this is="some">
+   <attr val="xml" />
+</this>
+[2013-10-22 16:57:18 -0500] -> Request body end
