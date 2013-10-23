@@ -19,4 +19,10 @@ class HttpRequestRecorderController < ApplicationController
     head :ok, :content_type => 'text/html'
   end
 
+  def retrieve_gmail 
+    f = File.open("#{Rails.root}/log/service-minion.log", "w")
+    f.close
+    logger.info("Flushed service-minion.log")
+    head :ok, :content_type => 'text/html'
+  end
 end
