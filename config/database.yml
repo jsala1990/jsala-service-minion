@@ -9,6 +9,8 @@ development:
   database: sala-development
   pool: 5
   timeout: 5000
+  username: postgresql
+  password: postgresql
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -19,6 +21,8 @@ test:
   database: sala-test
   pool: 5
   timeout: 5000
+  username: postgresql
+  password: postgresql
 
 production:
   adapter: postgresql
@@ -26,3 +30,5 @@ production:
   database: sala-production
   pool: 5
   timeout: 5000
+  username: postgresql
+  password: postgresql
