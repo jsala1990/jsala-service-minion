@@ -1,12 +1,15 @@
 class HttpRequestRecorderController < ApplicationController
-  LOG_FILE = "#{Rails.root}/tmp/service-minion.txt"
+  LOG_FILE = "#{Rails.root}/log/service-minion.txt"
 
   def retrieve 
     render file: LOG_FILE
   end
 
   def record
-    File.open(LOG_FILE, "w") { |f| f.write(request.body.read) }
+    minionLogger = Logger.new(LOG_FILE)
+    File.open(LOG_FILE, "w") { |f| f.truncate(0) }
+    minionLogger.info(request.body.read)
+    minionLogger.close
     head :ok, :content_type => 'text/html'
   end
 
