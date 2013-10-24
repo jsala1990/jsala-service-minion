@@ -1,5 +1,5 @@
 ServiceMinion::Application.routes.draw do
-  post '/minion' => 'http_request_recorder#record'
+  #post '/minion' => 'http_request_recorder#record'
   get '/minion' => 'http_request_recorder#retrieve'
   get '/retrievegmail' => 'http_request_recorder#retrieve_gmail'
 
