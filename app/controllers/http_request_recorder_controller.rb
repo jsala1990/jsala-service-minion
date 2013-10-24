@@ -1,5 +1,5 @@
 class HttpRequestRecorderController < ApplicationController
-  LOG_FILE = "#{Rails.root}/log/service-minion.log"
+  LOG_FILE = "#{Rails.root}/tmp/service-minion.txt"
 
   def retrieve 
     render file: LOG_FILE
