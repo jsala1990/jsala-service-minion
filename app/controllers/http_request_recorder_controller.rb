@@ -1,17 +1,15 @@
 class HttpRequestRecorderController < ApplicationController
-  LOG_FILE = "#{Rails.root}/log/service-minion.log"
+  #  LOG_FILE = "#{Rails.root}/log/service-minion.log"
 
   def retrieve 
-    render text: "e55505|||||||||"
+    render file: "#{Rails.root}/log/production.log" 
   end
 
-  #def record
-  #  minionLogger = Logger.new(LOG_FILE)
-  #  File.open(LOG_FILE, "w") { |f| f.truncate(0) }
-    #minionLogger.info(request.body.read)
-    #minionLogger.close
-    #head :ok, :content_type => 'text/html'
-  #end
+  def record
+    puts request.body.read
+    head :ok, :content_type => 'text/html'
+  end
+
 
   def retrieve_gmail 
   end
