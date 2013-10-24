@@ -1,7 +1,6 @@
 ServiceMinion::Application.routes.draw do
-  post '/record' => 'http_request_recorder#record'
-  delete '/clear' => 'http_request_recorder#clear'
-  get '/retrieve' => 'http_request_recorder#retrieve'
+  post '/minion' => 'http_request_recorder#record'
+  get '/minion' => 'http_request_recorder#retrieve'
   get '/retrievegmail' => 'http_request_recorder#retrieve_gmail'
 
   # The priority is based upon order of creation:
