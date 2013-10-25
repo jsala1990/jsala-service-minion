@@ -1,12 +1,19 @@
 class HttpRequestRecorderController < ApplicationController
   #  LOG_FILE = "#{Rails.root}/log/service-minion.log"
+  attr_accessor :this_is_var
 
   def retrieve 
-    render file: "#{Rails.root}/log/production.log" 
+    this_is_var = Rails.cache.read('rando')
+    puts this_is_var
+    render text: this_is_var
+
   end
 
   def record
-    puts request.body.read
+    Rails.cache.write('rando', params[:rando])
+#    puts params[:rando]
+    #@@this_is_var = params[:rando]
+#    puts request.body.read
     head :ok, :content_type => 'text/html'
   end
 
