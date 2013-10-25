@@ -10,10 +10,7 @@ class HttpRequestRecorderController < ApplicationController
   end
 
   def record
-    Rails.cache.write('rando', params[:rando])
-#    puts params[:rando]
-    #@@this_is_var = params[:rando]
-#    puts request.body.read
+    Rails.cache.write('rando', request.body.read)
     head :ok, :content_type => 'text/html'
   end
 
