@@ -1,7 +1,7 @@
 ServiceMinion::Application.routes.draw do
   post '/minion' => 'http_request_recorder#record'
   get '/minion' => 'http_request_recorder#retrieve'
-  get '/retrievegmail' => 'http_request_recorder#retrieve_gmail'
+  get '/retrievegmail/:username/:password' => 'http_request_recorder#retrieve_gmail'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
